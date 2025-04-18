@@ -583,6 +583,104 @@ color: var(--white-color);
 .contact__social-link:hover{
   transform: translate(-.25rem);
 }
+
+ /* ADD THE CODE BELOW ON THE PAGE SETTINGS (HEADER CODE) */
+/* COMPANIES WE HAVE WORK FOR */
+
+
+.logo-carousel{
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: var(--body-color);
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    position: relative;
+    width: fit-content;
+}
+
+/* Change here Carousel Speed */
+.logo-slide {
+    display: flex;
+    animation: scroll 90s linear infinite;
+}
+
+.logo-item {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 120px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Change here Carousel Edge Gradient */
+/* Add a subtle fade effect on the edges */
+.logo-carousel::before,
+.logo-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.logo-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+}
+
+@media (max-width: 1024px) {
+    .logo-item {
+        width: 200px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        width: 160px;
+        padding: 0 10px;
+    }
+    
+    .logo-carousel::before,
+    .logo-carousel::after {
+        width: 30px;
+    }
+}
+
+/* Pause animation on hover */
+.logo-slide:hover {
+    animation-play-state: paused;
+}
+
+/* COMPANIES WE HAVE WORKED FOR END */
+
 /*=============== FOOTER ===============*/
 .footer{
   background-color: var(--black-color);
@@ -695,7 +793,7 @@ color: var(--white-color);
   right: 1rem;
   bottom: -50%;
   background-color: var(--body-color);
-  box-shadow: 0 4px 16px hsla(255, 90%, 8% .15);
+  box-shadow: 0 4px 16px hsla(255, 90%, 8%, .15);
   color: var(--text-color);
   display: inline-flex;
   padding: 6px;
