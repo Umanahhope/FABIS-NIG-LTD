@@ -528,7 +528,7 @@ color: var(--white-color);
 }
 .projects__img {
   width: 100%; /* Makes the image width fill the container */
-  height: 340px; /* Adjust the height to a fixed value */
+  height: 220px; /* Adjust the height to a fixed value */
   object-fit: cover; /* Ensures images cover the container without stretching */
   display: block; /* Prevents any unwanted spacing below the image */
 }
